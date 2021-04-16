@@ -5,12 +5,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TextComponent } from './text/text.component';
+import { BlueComponent } from './blue/blue.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    HeroComponent
+    HeroComponent,
+    TextComponent,
+    BlueComponent
   ],
   imports: [
     BrowserModule,

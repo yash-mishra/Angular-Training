@@ -11,11 +11,19 @@ export class AppComponent {
 
   title = 'PracticeAngular';
 
+  redirectToHero() {
+    this.route.navigate(['hero'])
+  }
+
   redirectToTest() {
     this.route.navigate(['test'])
   }
-
-  redirectToHero() {
-    this.route.navigate(['hero'])
+  redirectTotext()
+  {
+    this.route.navigate(['text'])
+  }
+  redirectToBlue()
+  {
+    this.route.navigate(['blue'])
   }
 }
