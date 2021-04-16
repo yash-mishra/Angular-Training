@@ -5,12 +5,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TestChildComponent } from './test/test-child/test-child.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    HeroComponent
+    HeroComponent,
+    TestChildComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
