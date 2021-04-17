@@ -4,12 +4,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TextComponent } from './text/text.component';
 import { BlueComponent } from './blue/blue.component';
+import { TestChildComponent } from './test/test-child/test-child.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [{
   path: '', redirectTo: '', pathMatch: 'full'
 }, {
   path: 'test', component: TestComponent
 }, {
+ 
   path: 'hero', component: HeroComponent , children: [
     {
       path: '', redirectTo: 'text', pathMatch: 'full' },
@@ -24,7 +27,7 @@ const routes: Routes = [{
   path: 'blue', component: BlueComponent
 },
 {
-  path: '**', component: HeroComponent
+  path: '**', component: NotFoundComponent
 }];
 
 @NgModule({

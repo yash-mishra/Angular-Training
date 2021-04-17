@@ -5,7 +5,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TestChildComponent } from './test/test-child/test-child.component';
 import { TextComponent } from './text/text.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { BlueComponent } from './blue/blue.component';
 
 @NgModule({
@@ -13,6 +15,8 @@ import { BlueComponent } from './blue/blue.component';
     AppComponent,
     TestComponent,
     HeroComponent,
+    TestChildComponent,
+    NotFoundComponent,
     TextComponent,
     BlueComponent
   ],
