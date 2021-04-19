@@ -26,4 +26,8 @@ export class AppComponent {
   {
     this.route.navigate(['blue'])
   }
+  redirectTochild()
+  {
+    this.route.navigate(['test-child'])
+  }
 }

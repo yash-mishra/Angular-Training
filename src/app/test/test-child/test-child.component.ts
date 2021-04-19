@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./test-child.component.scss']
 })
 export class TestChildComponent {
-    title = '<b>Child</b>';
+    title = '<b>Called the child</b>';
     heroTitle: string;
     test() {
 
@@ -14,7 +14,7 @@ export class TestChildComponent {
 
     callback(d1, d2): string {
         if (!d2) {
-            d2 = 'Hero';
+            d2 = 'Component';
         }
 
         return d1 + ' ' + d2;

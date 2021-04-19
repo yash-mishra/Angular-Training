@@ -1,3 +1,27 @@
-p {
+h1 {
     color: blue;
+}
+#c {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  line-height: 20px;
+  padding: 9px;
+  border-radius: 12px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-image: linear-gradient(to right, rgb(10, 52, 53) 0%, rgb(33, 252, 255) 50%, rgb(6, 50, 51) 100%);
+  border: 2px solid rgb(28, 110, 164);
+  display: inline-block;
+}
+
+#c:hover {
+  background: #0A3435;
+}
+
+#c:active {
+  background: #063233;
 }

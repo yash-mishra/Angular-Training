@@ -7,11 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class HeroComponent {
     title = 'PracticeAngular';
-
+    val:string
     @Input() heroTitle: string;
     @Output() eventVariable: EventEmitter<string> = new EventEmitter<string>();
 
     data() {
-        this.eventVariable.emit('New Test Title')
+        this.eventVariable.emit(this.val)
     }
 }

@@ -1,2 +1,4 @@
 <h3>{{title}}</h3>
 <app-hero [heroTitle]='heroTitle' (eventVariable)="changeTitle($event)"></app-hero>
+<button id="c" (click)="redirectTochild()">Load child</button><br><br>
+<router-outlet></router-outlet>

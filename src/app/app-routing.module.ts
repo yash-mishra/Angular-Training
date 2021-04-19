@@ -10,13 +10,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [{
   path: '', redirectTo: '', pathMatch: 'full'
 }, {
-  path: 'test', component: TestComponent
+  path: 'test', component: TestComponent, children: [{
+    path: 'child', component: TestChildComponent
+  }]
 }, {
- 
-  path: 'hero', component: HeroComponent , children: [
-    {
-      path: '', redirectTo: 'text', pathMatch: 'full' },
-    {
+
+  path: 'hero', component: HeroComponent , children: [{
     path: 'text', component: TextComponent
   }]
 },

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-test',
@@ -6,12 +7,17 @@ import { Component } from '@angular/core';
     styleUrls: ['./test.component.scss']
 })
 export class TestComponent {
-    title = 'PracticeAngular';
-    heroTitle = 'Hero Component'
+    title = "Shourya's Angular Project";
+    heroTitle = 'Shourya is a Hero';
     test() {
 
     }
+    constructor(private route: Router) { }
 
+  redirectTochild()
+  {
+    this.route.navigate(['test/child'])
+  }
     changeTitle(event: string) {
         this.title = event;
     }
