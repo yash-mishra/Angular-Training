@@ -1,0 +1,5 @@
+<h3>{{title}}</h3>
+<label>Name: </label>
+<input type="text" #val name='name' placeholder='Enter Full Name'>
+<button (click)="redirecttochild(val.value)">Submit</button><hr>
+<app-child [titlex]="titlex"></app-child>
