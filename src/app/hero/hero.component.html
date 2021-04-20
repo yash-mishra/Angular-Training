@@ -1,4 +1,11 @@
-<h3>Hero Component</h3>
-<h1>{{ heroTitle }}</h1>
+<div *ngIf="!!dataValue; else elseBlock">
+    Name: {{dataValue.name}}<br>
+    Address: {{dataValue.address}}
+</div>
 
-<button value="Load Test" (click)="data()">Send data</button>
+<ng-template #elseBlock>No Data</ng-template><br>
+
+<button value="Load Test" class="buttonClass" (click)="getData()">Get data</button>
+
+<button value="Load Test" (click)="emitData()">Emit data</button>
+
