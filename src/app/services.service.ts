@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +11,7 @@ export class ServicesService {
   getData3()
   {
     let url="https://jsonplaceholder.typicode.com/todos/";
-    return this.http.get(url);
+    return this.http.get(url);            
   }
   getData2()
   {

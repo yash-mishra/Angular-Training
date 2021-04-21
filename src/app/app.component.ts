@@ -9,7 +9,7 @@ import {ServicesService} from './services.service'
 })
 export class AppComponent {
   title = 'angular app';
-  topic="";
+  topic=""; 
   constructor(private user:ServicesService)
   {
 console.warn(this.user.getData2())

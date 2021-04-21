@@ -12,6 +12,7 @@ describe('FooterComponent', () => {
     })
     .compileComponents();
   });
+  
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FooterComponent);

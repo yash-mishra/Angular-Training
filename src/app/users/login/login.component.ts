@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   {
     let data2={name:'anu', age:22}
     this.parentFunction.emit(data2)
+    
   }
 
 }
