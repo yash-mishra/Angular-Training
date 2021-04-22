@@ -10,6 +10,7 @@ export class TestComponent implements OnInit {
     check:boolean
     items=[]
     current=1
+    itemSize=0
     constructor(private appService: AppService) { 
         this.check = true;
     }
@@ -34,11 +35,21 @@ export class TestComponent implements OnInit {
             this.check = true;
     }
 
-    changeItem() {
+    addItem() {
         if(this.check == true) {
             this.items.push(this.current);
             this.current++;
+            this.itemSize++;
         }
-            
+    }
+    removeItem(){
+            if(this.check == true && this.current>1) {
+                const index =this.items.indexOf(this.current - 1, 0);
+                 if (index > -1) {
+                  this.items.splice(index, 1);
+                 }
+                this.itemSize--;
+                this.current--;
+            }
     }
 }
