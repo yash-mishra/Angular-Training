@@ -6,7 +6,7 @@ import { TestChildComponent } from './test/test-child/test-child.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [{
-  path: '', redirectTo: 'test', pathMatch: 'full'
+  path: '', redirectTo: '', pathMatch: 'full'
 }, {
   path: 'test', component: TestComponent, children: [{
     path: 'child', component: TestChildComponent
@@ -21,4 +21,6 @@ const routes: Routes = [{
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+}

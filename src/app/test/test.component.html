@@ -1,2 +1,22 @@
-<h3>{{title}}</h3>
-<app-hero [heroTitle]='heroTitle' (eventVariable)="changeTitle($event)"></app-hero>
+<div *ngIf="check; else elseS"> 
+    <h3>{{title}} Test true {{current}}</h3>
+    <app-hero [heroTitle]='heroTitle' (eventVariable)="changeTitle($event)"></app-hero> 
+</div>
+<ng-template #elseS>
+    <div>
+        <h3>{{title}} Test false {{current}}</h3>
+        <app-hero [heroTitle]='heroTitle' (eventVariable)="changeTitle($event)"></app-hero> 
+    </div>
+</ng-template>
+<button (click)="changeCheck()">Change check</button>
+<button (click)="changeItem()">Change item</button>
+<div *ngFor="let item of items">
+    <div *ngIf="check; else elseBlock">
+        {{item}} true
+    </div>
+    <ng-template #elseBlock>
+        <div>
+            {{item}} false
+        </div>
+    </ng-template>
+</div>

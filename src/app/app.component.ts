@@ -18,4 +18,8 @@ export class AppComponent {
   redirectToHero() {
     this.route.navigate(['hero'])
   }
+
+  render() {
+    return "<button> This is 2nd Button </button>"
+  }
 }

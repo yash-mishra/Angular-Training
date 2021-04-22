@@ -7,7 +7,12 @@ import { AppService } from '../app.service';
     styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
-    constructor(private appService: AppService) { }
+    check:boolean
+    items=[]
+    current=1
+    constructor(private appService: AppService) { 
+        this.check = true;
+    }
 
     dataValue
 
@@ -20,5 +25,20 @@ export class TestComponent implements OnInit {
 
     changeTitle(event: string) {
         this.title = event;
+    }
+
+    changeCheck() {
+        if (this.check == true)
+            this.check = false;
+        else 
+            this.check = true;
+    }
+
+    changeItem() {
+        if(this.check == true) {
+            this.items.push(this.current);
+            this.current++;
+        }
+            
     }
 }
