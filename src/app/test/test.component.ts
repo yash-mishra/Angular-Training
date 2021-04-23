@@ -43,13 +43,13 @@ export class TestComponent implements OnInit {
         }
     }
     removeItem(){
-            if(this.check == true && this.current>1) {
-                const index =this.items.indexOf(this.current - 1, 0);
-                 if (index > -1) {
-                  this.items.splice(index, 1);
-                 }
-                this.itemSize--;
-                this.current--;
-            }
+        if(this.check == true && this.current>1) {
+            const index =this.items.indexOf(this.current - 1, 0);
+                if (index > -1) {
+                this.items.splice(index, 1);
+                }
+            this.itemSize--;
+            this.current--;
+        }
     }
 }

@@ -9,14 +9,17 @@ import { TestUser } from '../models/testUser.model';
 })
 export class HeroComponent implements OnInit {
     constructor(
-        private appService: AppService) { }
+        private appService: AppService) { 
+            this.dataList = HeroComponent.dataList;
+        }
 
     title = 'PracticeAngular';
     dataValue: TestUser;
-
+    static dataList=[];
+    dataList=[]
     @Input() heroTitle: string;
     @Output() eventVariable: EventEmitter<string> = new EventEmitter<string>();
-
+        
     ngOnInit() {
         this.addListener();
         //this.mapValue()
@@ -39,5 +42,25 @@ export class HeroComponent implements OnInit {
 
     emitData() {
         this.eventVariable.emit('Emmited Data')
+    }
+
+    addToList(name, address) {
+        HeroComponent.dataList.push(new TestUser(name, address))
+    }
+
+    populateDataList() {
+        var tempList: TestUser[];
+        tempList = this.appService.getDataList();
+        for (let i = 0; i < tempList.length; i++){
+            HeroComponent.dataList.push(tempList[i]);
+        }
+        //this.dataList.push(this.appService.getDataList());
+    }
+
+    populateDataListFromJson() {
+        var tempList = this.appService.getDataListFromJson();
+        for (let i = 0; i < tempList.length; i++) {
+            HeroComponent.dataList.push(new TestUser(tempList[i].name, tempList[i].address));
+        }
     }
 }

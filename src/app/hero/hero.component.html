@@ -4,8 +4,23 @@
 </div>
 
 <ng-template #elseBlock>No Data</ng-template><br>
+<div *ngFor="let data of dataList">
+    <div>
+        Name: {{data.name}}
+        Address: {{data.address}}
+    </div>
+</div>
 
-<button value="Load Test" class="buttonClass" (click)="getData()">Get data</button>
+<button value="Load Test" (click)="populateDataList()">Populate data list</button>
 
-<button value="Load Test" (click)="emitData()">Emit data</button>
+<button value="Load Test" (click)="populateDataListFromJson()">Populate data list from json</button>
+
+
+<label for="username">Enter name: </label>
+<input #username id = "username">
+<label for="address">Enter address: </label>
+<input #address id = "address">
+
+
+<button value="Load Test" (click)="addToList(username.value, address.value)">Add data</button>
 

@@ -1,11 +1,9 @@
 <div *ngIf="check; else elseS"> 
     <h3>{{title}} Test true {{itemSize}}</h3>
-    <app-hero [heroTitle]='heroTitle' (eventVariable)="changeTitle($event)"></app-hero> 
 </div>
 <ng-template #elseS>
     <div>
         <h3>{{title}} Test false {{itemSize}}</h3>
-        <app-hero [heroTitle]='heroTitle' (eventVariable)="changeTitle($event)"></app-hero> 
     </div>
 </ng-template>
 <button (click)="changeCheck()">Change check</button>
