@@ -1,0 +1,14 @@
+<h3>Error Page</h3>
+<h4>Service Functionality</h4>
+
+<div *ngIf="!!dataValue; else elseBlock">
+    Name: {{dataValue.name}}<br>
+    Passcode: {{dataValue.code}}
+</div>
+
+<ng-template #elseBlock>Press the button to Display Data</ng-template><br>
+
+<button value="Load Test" class="buttonClass" (click)="getData()">Get data</button>
+
+
+
